@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <h1>All quizzes</h1>
-            <div className='' >
+            <div className=' w-10/12 border-2 m-auto md:grid grid-cols-4 gap-2' >
             {
                 quizzesData.map(data => 
                     <Quizzes 
