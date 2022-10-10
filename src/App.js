@@ -5,6 +5,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Statics from './Components/Statics/Statics';
 import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
+import Quiz from './Components/Quiz/Quiz'
+
+
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +28,13 @@ function App() {
           loader:  () => {
             return fetch('https://openapi.programming-hero.com/api/quiz/');
           },
+        },
+        {
+          path:'/:id',
+          loader: ({params}) =>{
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+          },
+          element: <Quiz></Quiz>
         },
         {
           path: "statics",
