@@ -1,27 +1,43 @@
-import React from 'react';
-
+import React, { useState } from "react";
+import { EyeIcon } from "@heroicons/react/24/solid";
 
 const QuizQA = (props) => {
-    
-    function handleClick(event){
-        if(event.target.innerText === props.quesAns.correctAnswer ){
-
-            alert('Yesss, you are right')
-        }else{
-            alert('wrong answer')
-        }
+  const [open, setOpen] = useState();
+  function handleClick(event) {
+    console.log(event.target.innerText);
+    console.log(props.quesAns.correctAnswer);
+    if (event.target.innerText === props.quesAns.correctAnswer) {
+      alert("Yesss, you are right");
+      setOpen(true);
+    } else {
+      alert("wrong answer");
+      setOpen(false);
     }
-    return (
-        <div>
-            <h1>{props.quesAns.question}</h1>
-            {
-
-            props.quesAns.options.map((option, idx) => <button onClick={  handleClick} className='m-2 p-2 border-2 border-pink-400 rounded-lg' key={idx} >{option}</button>)
-            }
-            {/* <p>{props.quesAns.options}</p> */}
-            {/* <input type='radio'> {props.quesAns.options}</input> */}
-        </div>
-    );
+}
+const correctAns = () => {
+   alert(props.quesAns.correctAnswer)
+}
+  return (
+    <div className="w-96 m-auto  border-2 rounded-md bg-rose-400">
+      <div className="flex  content-center">
+        <h1 className="m-3 p-2 w-11/12 text-bold text-3xl">{props.quesAns.question}</h1>
+        <EyeIcon onClick={correctAns} className="h-5 w-5 m-2" />
+      </div>
+      {props.quesAns.options.map((option, idx) => (
+        <button
+          onClick={handleClick}
+          className={`m-1 px-3 py-1 border-2 border-blue-gray-900 rounded-lg ${
+            open ? "bg-pink-300" : "bg-cool-gray-400"
+          }`}
+          key={idx}
+        >
+          {option}
+        </button>
+      ))}
+      {/* <p>{props.quesAns.options}</p> */}
+      {/* <input type='radio'> {props.quesAns.options}</input> */}
+    </div>
+  );
 };
 
 export default QuizQA;

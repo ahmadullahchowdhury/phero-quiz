@@ -7,9 +7,8 @@ const Quiz = () => {
     const quiz = useLoaderData()
     console.log(quiz)
     return (
-        <div>
-            <h1>Inside Quiz</h1>
-            <p className='m-4'>Name of the Quiz: {quiz.data.name}</p>
+        <div className=' '>
+            <p className='m-4 p-4 text-4xl'>Name of the Quiz: {quiz.data.name}</p>
             {quiz.data.questions.map(question => <QuizQA 
             key={question.id}
             quesAns = {question}
