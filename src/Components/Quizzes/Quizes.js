@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 
 const Quizzes = (props) => {
-  console.log(props.data);
   return (
     <div className=" mx-auto bg-red-200  p-3 my-3 ">  
       <h1 className="p-2 m-2 text-3xl">{props.data.name}</h1>

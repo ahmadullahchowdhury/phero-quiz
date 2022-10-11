@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import { EyeIcon } from "@heroicons/react/24/solid";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const QuizQA = (props) => {
   const [open, setOpen] = useState();
   function handleClick(event) {
     if (event.target.innerText === props.quesAns.correctAnswer) {
-      alert("Yesss, you are right");
+      
       setOpen(true);
+      toast.success("Yes, you're right", { autoClose: 1000 })
     } else {
-      alert("wrong answer");
+      toast.error("Oops, you're wrong", { autoClose: 1000 })
       setOpen(false);
     }
 }
 const correctAns = () => {
-   alert(props.quesAns.correctAnswer)
+    toast.info(props.quesAns.correctAnswer, { autoClose: 1000 })
 }
   return (
     <div className=" w-4/5 m-auto  border-2 rounded-md bg-teal-700 p-3 ">
@@ -31,7 +34,10 @@ const correctAns = () => {
         >
           {option}
         </button>
-      ))}
+        
+      ))
+      }
+      <ToastContainer autoClose={1000}  />
       {/* <p>{props.quesAns.options}</p> */}
       {/* <input type='radio'> {props.quesAns.options}</input> */}
     </div>

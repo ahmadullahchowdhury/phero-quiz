@@ -33,7 +33,6 @@ const NavBar = () => {
                 : "top-[-120px]"
             }`}
           >
-            
             <NavLink to='/home'>Home</NavLink>
             <NavLink to='/statics'>Statics</NavLink>
             <NavLink to='/blog'>Blog</NavLink>

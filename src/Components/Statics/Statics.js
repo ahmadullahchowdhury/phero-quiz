@@ -17,7 +17,7 @@ const Statics = () => {
   const apiData = useLoaderData();
   const data = apiData.data;
 
-  console.log(data);
+
   return (
     <div className="mt-5 pt-5">
       <h1>Statics page</h1>
