@@ -9,7 +9,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-orange-300">
+    <nav className="bg-rose-400">
       <div
         onClick={iconClick}
         className=" md:hidden absolute right-0 mt-5 mr-5"
@@ -21,8 +21,9 @@ const NavBar = () => {
         )}
       </div>
       <div className="w-full  grid grid-cols-2 p-5  ">
-        <div className="flex justify-start">
-          <h1 className="mx-2">Kowcher</h1>
+        <div className="flex align-center ">
+          <img className="w-7 h-7" src="icons8-quiz-96.png" alt='logo'></img>
+          <h1 className="mx-2 mt-1 font-semibold">Phero Quiz</h1>
         </div>
         <div className=" ">
           <ul
