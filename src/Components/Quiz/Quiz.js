@@ -5,10 +5,9 @@ import QuizQA from '../QuizQA/QuizQA';
 
 const Quiz = () => {
     const quiz = useLoaderData()
-    console.log(quiz)
     return (
-        <div className=' '>
-            <p className='m-4 p-4 text-4xl'>Name of the Quiz: {quiz.data.name}</p>
+        <div className=''>
+            <p className='m-4 p-4 md:text-3xl'>Name of the Quiz: {quiz.data.name}</p>
             {quiz.data.questions.map(question => <QuizQA 
             key={question.id}
             quesAns = {question}

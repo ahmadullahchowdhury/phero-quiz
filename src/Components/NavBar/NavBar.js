@@ -9,7 +9,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-rose-400">
+    <nav className="bg-teal-500">
       <div
         onClick={iconClick}
         className=" md:hidden absolute right-0 mt-5 mr-5"
@@ -27,9 +27,9 @@ const NavBar = () => {
         </div>
         <div className=" ">
           <ul
-            className={`md:flex justify-around md:static absolute ${
+            className={`flex justify-around  md:static absolute ${
               open
-                ? "top-12 bg-orange-300 w-full absolute left-0 pb-3"
+                ? "top-12 flex flex-col  bg-teal-500 w-full absolute left-0 p-3"
                 : "top-[-120px]"
             }`}
           >
@@ -37,7 +37,6 @@ const NavBar = () => {
             <NavLink to='/home'>Home</NavLink>
             <NavLink to='/statics'>Statics</NavLink>
             <NavLink to='/blog'>Blog</NavLink>
-            <NavLink to='/login'>Login</NavLink>
           </ul>
         </div>
       </div>
