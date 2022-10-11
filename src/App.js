@@ -14,13 +14,13 @@ function App() {
       path: "/",
       element: <Main />,
       children: [
-        { path: '*', element: <Error/>},
         {
           path: "home",
           element: <Home/>,
           loader: () => {
             return fetch("https://openapi.programming-hero.com/api/quiz/");
           },
+          errorElement: <Error></Error>
         },
         {
           path: "/",
@@ -28,6 +28,7 @@ function App() {
           loader: () => {
             return fetch("https://openapi.programming-hero.com/api/quiz/");
           },
+          errorElement: <Error></Error>
         },
         {
           path: "/:id",
@@ -37,6 +38,7 @@ function App() {
             );
           },
           element: <Quiz/>,
+          errorElement: <Error></Error>
         },
         {
           path: "statics",
@@ -44,16 +46,18 @@ function App() {
           loader: () => {
             return fetch("https://openapi.programming-hero.com/api/quiz/");
           },
+          errorElement: <Error></Error>
         },
         {
           path: "Blog",
           element: <Blog/>,
+          errorElement: <Error></Error>
         },
         
 
+        { path: '*', element: <Error/>},
       ],
     },
-    { path: '*', element: <Error/>},
   ]);
   return (
     <div className="App">
