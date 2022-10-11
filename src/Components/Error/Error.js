@@ -5,7 +5,8 @@ const Error = () => {
     
     return (
         <div className='p-5 m-5'>
-            <h1 className='text-5xl'>The page you tried to access is not exits</h1>
+            <p className='md:text-9xl'>Error 404</p>
+            <h1 className='md:text-5xl'>The page you tried to access doesn't exits</h1>
             
         </div>
     );

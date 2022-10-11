@@ -12,7 +12,7 @@ const Home = () => {
             <div className="">
             <h1 className='text-3xl mt-5 font-semi-bold '>All quizzes</h1>
             <h1 className='mt-5'>Welcome to Phero Quiz. Here you can test your Programming Skill by participating in Quiz.</h1>
-            <h1 className='mt-5'>You will get the feedback immediately if you click a Quiz optin</h1>
+            <h1 className='mt-5'>You will get the feedback immediately if you click a Quiz option</h1>
 
             <img className='mx-auto md:w-1/3' src='banner.jpg' alt=''/>
             </div>
