@@ -6,8 +6,11 @@ Basically It was a assignment project. The objective was the make a single page 
 
 In the quiz section, if you click a option it will give you a feedback immediately whether your answer is wrong or right. If your answer is correct, then options will turn meaning that you have done with that Quiz Question. 
 
-## In this project I have used Tailwind as my CSS framework. This site is fully mobile responsive
-## For icon package, I have used HeroIcons by Tailwind. 
-## Third Party node package such as react-router, recharts, react-toastify are also used.
 
+
+<ul>
+  <li>In this project I have used Tailwind as my CSS framework. This site is fully mobile responsive</li>
+  <li>For icon package, I have used HeroIcons by Tailwind. </li>
+  <li>Third Party node package such as react-accrodion, react-router, recharts, react-toastify are also used.</li>
+</ul>
 
