@@ -23,7 +23,7 @@ const NavBar = () => {
       <div className="w-full  grid grid-cols-2 p-5  ">
         <div className="flex align-center ">
           <img className="w-7 h-7" src="icons8-quiz-96.png" alt='logo'></img>
-          <h1 className="mx-2 mt-1 font-semibold">Phero Quiz</h1>
+          <h1 className="mx-2 mt-1 font-semibold"><NavLink to='/home'>Phero Quiz</NavLink></h1>
         </div>
         <div className=" ">
           <ul
@@ -33,9 +33,9 @@ const NavBar = () => {
                 : "top-[-120px]"
             }`}
           >
-            <NavLink to='/home'>Home</NavLink>
-            <NavLink to='/statics'>Statics</NavLink>
-            <NavLink to='/blog'>Blog</NavLink>
+            <NavLink className='font-semibold ' to='/home'>Home</NavLink>
+            <NavLink className='font-semibold ' to='/statics'>Statics</NavLink>
+            <NavLink className='font-semibold ' to='/blog'>Blog</NavLink>
           </ul>
         </div>
       </div>

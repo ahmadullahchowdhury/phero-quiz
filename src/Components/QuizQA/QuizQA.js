@@ -7,7 +7,6 @@ const QuizQA = (props) => {
   const [open, setOpen] = useState();
   function handleClick(event) {
     if (event.target.innerText === props.quesAns.correctAnswer) {
-      
       setOpen(true);
       toast.success("Yes, you're right", { autoClose: 1000 })
     } else {
@@ -36,7 +35,20 @@ const correctAns = () => {
         </button>
         
       ))
+
+      
       }
+      {/* {
+        props.quesAns.options.map((option, idx) => (
+          <label onClick={handleClick}
+          className={`m-1 px-3 py-1 text-white border-2 border-blue-gray-900 rounded-lg ${
+            open ? "bg-emerald-600" : "bg-cool-gray-400"
+          }`}>
+          <input  type="radio" value={{option}} key={idx} />
+          {option}
+        </label>
+        ))
+      } */}
       <ToastContainer autoClose={1000}  />
       {/* <p>{props.quesAns.options}</p> */}
       {/* <input type='radio'> {props.quesAns.options}</input> */}

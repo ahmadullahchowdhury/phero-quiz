@@ -7,7 +7,7 @@ const Quiz = () => {
     const quiz = useLoaderData()
     return (
         <div className=''>
-            <p className='m-4 p-4 md:text-3xl'>Name of the Quiz: {quiz.data.name}</p>
+            <p className='m-4 p-4 md:text-3xl '>Name of the Quiz Test: <strong>{quiz.data.name}</strong> </p>
             {quiz.data.questions.map(question => <QuizQA 
             key={question.id}
             quesAns = {question}
